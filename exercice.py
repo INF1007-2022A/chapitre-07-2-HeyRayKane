@@ -112,5 +112,5 @@ if __name__ == "__main__":
 	print(f"Lucas : {[elem for elem in lucas(10)]}")
 	perrin = build_recursive_sequence_generator([3, 0, 2], lambda seq: seq[-2] + seq[-3])
 	print(f"Perrin : {[elem for elem in perrin(10)]}")
-	hofstadter_q = build_recursive_sequence_generator([1, 1], lambda seq: (seq[-seq[-1]]+seq[len(seq)-seq[-2]]))
+	hofstadter_q = build_recursive_sequence_generator([1, 1], lambda seq: (seq[-seq[-1]]+seq[-seq[-2]]), keep_whole_sequence=True)
 	print(f"Hofstadter-Q : {[elem for elem in hofstadter_q(10)]}")
